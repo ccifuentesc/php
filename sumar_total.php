@@ -90,7 +90,9 @@ $aProductos[] = array(
 
                 <?php $sumatotal= $aProductos[$contador]["precio"]+$sumatotal;} ?>
                     
-                </tbody>                
+                </tbody>
+                
+                <tfoot></tfoot>
 
             </table>
 
