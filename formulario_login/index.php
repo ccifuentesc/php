@@ -47,18 +47,20 @@ if($_POST){
 
         <div class="row">
             <div class="col-12">
+                <?php if (isset($msg)): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $msg; ?>
+                    </div>
+                <?php endif; ?>
                 <form action="" method="POST">
-                    <div class="py-2">
-                        <?php if(isset($msg)){$msg;} ?>
-                        <label for="txtUsuario">Usuario:</label>
-                        <input class="form-control" type="text" name="txtUsuario">
+                    <div class="my-3">
+                        <label for="">Usuario: <input type="text" id="txtUsuario" name="txtUsuario" class="form-control"></label>
                     </div>
-                    <div class="py-2">
-                        <label for="txtClave">Clave: </label>
-                        <input class="form-control" type="password" name="txtClave" id="">
+                    <div class="my-3">
+                        <label for="">Clave: <input type="password" id="txtClave" name="txtClave" class="form-control"></label>
                     </div>
-                    <div class="py-3">
-                        <button class="btn btn-primary" type="submit">Ingresar</button>
+                    <div class="my-3">
+                        <button class="btn btn-primary" type="submit">ENVIAR</button>
                     </div>
                 </form>
             </div>
