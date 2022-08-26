@@ -1,0 +1,44 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+//Definición de las clases
+
+class Persona{
+    public $documento;
+    public $nombreCompleto;
+    public $telefono;
+    public $correo;
+    public $nacionalidad;
+    public $fechaNac;
+}
+
+class Alumno extends Persona{
+    public $legajo;
+    public $promedio;
+    public $asistencia;
+}
+
+//Programa
+
+$alumno1 = new Persona(); //Se instancia la clase Persona
+$alumno1 -> nombreCompleto = "Anabella";
+$alumno1 -> fechaNac = "25-03-2000";
+$alumno1 -> documento = "38789671";
+$alumno1 -> nacionalidad = "Argentina";
+$alumno1 -> telefono = "+ 54 11 5678-1234";
+$alumno1 -> correo = "anabella@correo.com";
+
+$alumno2 = new Persona(); //Se instancia la clase Persona
+$alumno2 -> nombreCompleto = "Bernabe";
+$alumno2 -> documento = "45123678";
+
+$alumno3 = new Alumno();
+$alumno3 -> promedio = 8;
+$alumno3 -> nombreCompleto = "Javier";
+
+
+?>
