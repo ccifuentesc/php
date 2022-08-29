@@ -182,7 +182,7 @@ echo $carrito->aProductos[0]->nombre;
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 py-5">
                 <?php $carrito->imprimirTicket();//imprime el ticket de la compra ?>
             </div>
         </div>
