@@ -22,6 +22,16 @@ class Persona
     {
         $this->$propiedad = $valor;
     }
+
+    public function __construct($documento,$nombre,$correo,$celular)
+    {
+        $this->documento = $documento;
+        $this->nombre = $nombre;
+        $this->correo = $correo;
+        $this->celular = $celular;   
+    }
+    
+
 }
 
 class Alumno extends Persona
@@ -34,10 +44,8 @@ class Alumno extends Persona
 
     public function __construct($documento, $nombre, $correo, $celular, $fechaNac)
     {
-        $this->documento = $documento;
-        $this->nombre = $nombre;
-        $this->correo = $correo;
-        $this->celular = $celular;
+        parent::__construct($documento,$nombre,$correo,$celular);
+        
         $this->fechaNac = $fechaNac;
         $this->peso = 0.0;
         $this->altura = 0.0;
